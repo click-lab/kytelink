@@ -30,7 +30,7 @@ const Redirect = ({ user, setUser }: RedirectProps) => {
         <Input
           focusBorderColor="gray.200"
           placeholder="https://yourwebsite.com"
-          value={user.redirectLink}
+          value={user.redirectLink || ''}
           onChange={(e) => setUser({ ...user, redirectLink: e.target.value })}
         />
         <HStack spacing={2}>

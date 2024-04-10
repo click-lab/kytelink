@@ -3,7 +3,7 @@
 
 import { Box, Flex, HStack, useToast } from '@chakra-ui/react'
 import ICON_OPTIONS from 'consts/icons'
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
+import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd'
 import { GrAddCircle } from 'react-icons/gr'
 import { TIcon, TUser } from 'types/user'
 

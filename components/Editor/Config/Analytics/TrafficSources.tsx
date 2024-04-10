@@ -61,13 +61,13 @@ const TrafficSources = ({ trafficSources, isLandingPage }: TrafficSourcesProps) 
                   <Text> {count === 1 ? 'click' : 'clicks'}</Text>
                 </VStack>
               </HStack>
-            )
+            );
           })}
 
         {!trafficSources && <Spinner size="lg" />}
       </VStack>
     </VStack>
-  )
+  );
 }
 
 export default TrafficSources

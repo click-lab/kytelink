@@ -19,13 +19,13 @@ import { getBaseURL } from 'lib/utils'
 import { IoIosArrowBack } from 'react-icons/io'
 import { FaArrowRight, FaGithub, FaGoogle } from 'react-icons/fa'
 import { NextSeo } from 'next-seo'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { trackClientEvent } from 'lib/posthog'
 import { PosthogEvents } from 'consts/posthog'
 
 const PROVIDERS = [
   { name: 'Google', icon: FaGoogle, color: 'blue.500' },
-  { name: 'Github', icon: FaGithub, color: 'gray.800' },
+  // { name: 'Github', icon: FaGithub, color: 'gray.800' }, // Github auth is disabled
 ]
 
 const AuthComponent = ({ isLogin }: { isLogin: boolean }) => {

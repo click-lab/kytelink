@@ -4,7 +4,7 @@
 import { useState } from 'react'
 
 import { Box, useColorModeValue, VStack } from '@chakra-ui/react'
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
+import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd'
 
 import { TLink, TUser } from 'types/user'
 import LinkModal from '../LinkModal'

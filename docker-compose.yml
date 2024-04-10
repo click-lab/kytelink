@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  app:
+    image: "node"
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: sleep infinity
+
+  mailer:
+    image: schickling/mailcatcher
+    restart: always
+    ports:
+      - "1028:1025"
+      - "1083:1080"

@@ -25,7 +25,7 @@ const Config = ({ user, setUser, route }: ConfigProps) => {
       <Box borderLeft="1px" borderColor={{ base: 'transparent', lg: 'gray.200' }} w="full">
         <Tabs
           defaultIndex={defaultIndex}
-          onChange={(index) => router.push({ pathname: `/edit/${ROUTES[index]}` })}
+          onChange={(index: number) => router.push({ pathname: `/edit/${ROUTES[index]}` })}
           px={{ base: 0, md: 28 }}
         >
           <TabList justifyContent="space-between" w="full" mt={12}>
@@ -43,7 +43,7 @@ const Config = ({ user, setUser, route }: ConfigProps) => {
 
           <TabPanels>
             {[Links, Design, Analyitcs, Settings].map((Component) => (
-              <TabPanel p={0} py={6}>
+              <TabPanel p={0} py={6} key={Component.name}>
                 <Component user={user} setUser={setUser} />
               </TabPanel>
             ))}

@@ -36,7 +36,7 @@ const Link = ({ linkData }: { linkData: TLink }) => {
       </Text>
       <Spacer />
       <Box w="8" cursor="grab" _active={{ cursor: 'grabbing' }}>
-        <BsPencilSquare size="sm" />
+        <BsPencilSquare size="24px" />
       </Box>
     </Flex>
   )

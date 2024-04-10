@@ -6,9 +6,14 @@ const PageViews = ({ totalPageViews }: PageViewsProps) => {
   return (
     <VStack w="full" border="1px" borderColor="gray.200" rounded="lg" p={4}>
       <Heading>Total Page Views</Heading>
-      <Text fontWeight="bold" fontSize="4xl">
-        {totalPageViews === undefined ? <Spinner size="lg" /> : totalPageViews}
-      </Text>
+      <VStack>
+        {totalPageViews && (
+          <Text fontWeight="bold" fontSize="4xl">
+            {totalPageViews}
+          </Text>
+        )}
+        {totalPageViews === undefined && <Spinner size="lg" />}
+      </VStack>
     </VStack>
   )
 }
